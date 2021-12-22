@@ -1,27 +1,34 @@
-# TiLogisticsHubCadet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+# Ver DEMO aquí:
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://user-images.githubusercontent.com/85801314/147167418-282204e7-3197-4588-97c6-7c396cc5d469.mp4
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Comenzando 🚀
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local.
 
-## Running end-to-end tests
+1-Primer paso, clonar el repositorio en Git
+```sh
+$git clone https://github.com/Victoria23-1998/Interfaz_Cliente.git
+```
+2- Instalar todas las dependencias al abrir el proyecto en Visual Studio Code
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```sh
+npm install
+```
+3- Levantar el servidor y la aplicación con el siguiente comando
 
-## Further help
+```sh
+npm start
+```
+#Construido con 🛠️
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Angular] - V.13
+- [Typescript] - V.4.4.3
+- [Angular Material] - V.13.0.2
+- [SCSS] 
