@@ -1,0 +1,44 @@
+ <!--header area start-->
+ <input type="checkbox" id="check">
+
+    
+    <header>
+       
+        <div class="left_area">
+            <h3><img class="logo" src="../../../../assets/img/Azul Tecnología y Juegos Logotipo (1) 2.png" alt=""
+                    width="30px"> <span>TODO IT</span> </h3>
+                   
+        </div>
+        
+        <div class="right_area" (click)="logout()"  *ngIf="this.show.showMenu()">
+            <a class="logout_btn">Logout</a>
+        </div>
+    </header>
+    <!--header area end-->
+    <!--sidebar start-->
+    <div class="sidebar">
+        <label for="check">
+            <img src="../../../../assets/img/icons8-menú-48.png" id="sidebar_btn" alt="" width="30px">
+        </label>
+        <div class="img-user" *ngIf="this.show.showMenu()">
+            <img src="../../../../assets/img/blank-profile-picture-gf001a37d2_640.png" width="80px"
+                class="profile_image" alt="">
+            <h4>{{name}}</h4>
+        </div>
+        <a [routerLink]="['/dasboard/registro']"><img src="../../../../assets/img/usuario.png"
+                [routerLink]="['/dasboard/registro']" width="20px" alt="" class="icon"><span *ngIf="this.show.showMenu()">Registro</span><span *ngIf="!this.show.showMenu()">Iniciar</span></a>
+        <a [routerLink]="['/dasboard/travel']" *ngIf="this.show.showMenu()"><img src="../../../../assets/img/icons8-delivery.png"
+                [routerLink]="['/dasboard/travel']" width="20px" alt="" class="icon"><span>Viajes</span></a>
+        <a [routerLink]="['/dasboard/historyTravel']" *ngIf="this.show.showMenu()"><img
+                src="../../../../assets/img/icons8-el-tiempo-de-entrega-90.png"
+                [routerLink]="['/dasboard/historyTravel']" width="20px" alt="" class="icon"><span>Historial de
+                viajes</span></a>
+        <a [routerLink]="['/dasboard/lists']" *ngIf="this.show.showMenu()"><img src="../../../../assets/img/icons8-check-list-48.png" width="20px"
+                [routerLink]="['/dasboard/lists']" alt="" class="icon"><span>Listas</span></a>
+
+    </div>
+
+    <!--sidebar end-->
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>

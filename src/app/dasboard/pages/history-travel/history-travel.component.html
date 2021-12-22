@@ -1,0 +1,34 @@
+<section>
+    <h3>Historial</h3>
+    <div *ngIf="isloading" class="content-loading">
+      <img src="../../../../assets/img/Azul Tecnología y Juegos Logotipo (1) 2.png" alt="" width="110px">
+      <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+    </div>
+    <div *ngFor="let travel of arrayHistory" >
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title *ngIf="travel.travelEquipmentDTOs[travel.travelEquipmentDTOs.length-1].cadete == null">
+              Cadete: Sin Cadete
+            </mat-panel-title>
+            <mat-panel-title *ngIf="travel.travelEquipmentDTOs[travel.travelEquipmentDTOs.length-1].cadete !== null">
+                Cadete: {{travel.travelEquipmentDTOs[travel.travelEquipmentDTOs.length-1].cadete.fullName}}
+              </mat-panel-title>
+            <mat-panel-description>
+              Estado del viaje: Finalizado
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>
+            <b>Cliente:</b>{{travel.travelEquipmentDTOs[travel.travelEquipmentDTOs.length-1].operator.fullName}}
+          </p>
+          <p><b>Fecha y hora:</b>{{travel.travelEquipmentDTOs[travel.travelEquipmentDTOs.length-1].operationDate |
+            date:'M/d/yy, h:mm a'}}</p>
+          <p>
+            <b>Dirección:</b>{{travel.travelEquipmentDTOs[travel.travelEquipmentDTOs.length-1].equipment.cliente.address}}
+          </p>
+          <p><b>Equipo:</b>{{travel.travelEquipmentDTOs[travel.travelEquipmentDTOs.length-1].equipment.mark}}</p>
+        </mat-expansion-panel>
+    </div>
+    
+</section>
+

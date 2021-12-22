@@ -1,0 +1,118 @@
+.FormuRegistro{
+    background-color: var(--principal-color);
+    border-radius: 0.625rem;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 1.875rem;
+    height: auto;
+    margin-left: 90px;
+    
+  
+}
+p{
+    margin: 0rem;
+    width: 290px;
+    margin-left: 60px;
+  margin-right:auto ;
+  margin-left: auto;
+}
+
+.titulo{
+    color: whitesmoke;
+    font-family:'Open Sans', sans-serif ;
+    font-weight:700;
+    text-align: center;
+    margin-top: 0.625rem;
+}
+
+.mat-form-field{
+   margin-right: 1.25rem;
+ 
+}
+
+.mat-radio-button{
+    margin-right: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.example-form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mat-radio-group{
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 400px;
+    margin-bottom: 20px;
+}
+.subtmitBtn{
+   
+    border-radius: 5px;
+    padding-top: 0.625rem;
+    padding-bottom:0.625rem ;
+}
+button{
+    color: black!important;
+    font-weight: bold;
+    border: none;
+    width:293px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height: 50px;
+   
+}
+h3{
+    font-family: 'Open sans';
+    font-weight: bold;
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #CAE3DB;
+    border-radius: 5px;
+    text-shadow: 2px 2px 2px #7A7A7A;
+    color: rgb(39, 39, 39);
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 90px;
+}
+
+.btn-azul{
+    background-color:#021921 ;
+    color: whitesmoke !important;
+}
+h4{
+    color: whitesmoke;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 0px;
+   padding-top:5px ;
+   padding-bottom: 5px;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    width: 200px;
+}
+mat-form-field{
+    width:100%;
+   
+} 
+.select-vehiculo{
+    margin-left: 30px;
+    p{
+        font-family: 'Open sans';
+        margin-left: 0px;
+    }
+    select{
+        border-radius: 10px;
+        border:none;
+        height: 30px;
+        width: 150px;
+        margin-right: 174px;
+    }
+    
+}
+

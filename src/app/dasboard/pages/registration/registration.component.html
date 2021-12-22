@@ -1,0 +1,59 @@
+<h3>Registro</h3>
+<div class="FormuRegistro">
+  
+    <form [formGroup]="profileForm" #formDirective=ngForm class="example-form" (ngSubmit)="sendData(formDirective)" id="formRegister"  autocomplete="off">
+        <mat-radio-group  aria-label="Select an option" formControlName="rol" (change)="onChange($event)" >
+            <mat-radio-button value="cliente"  [checked]="true" >Cliente</mat-radio-button>
+            <mat-radio-button value="cadete" >Cadete</mat-radio-button>
+          </mat-radio-group>
+    
+        <p class="nombre">
+      <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Nombre Completo:</mat-label>
+        <input name="fullName" matInput formControlName="fullName" id="fullName" type="text" [value]="user.fullName" autocomplete="none" required>
+      </mat-form-field>
+    </p>
+   
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Email:</mat-label>
+        <input name="email" matInput formControlName="email" id="email" type="email" [value]="user.email"
+         autocomplete="none"  required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Contraseña:</mat-label>
+        <input name="password" matInput formControlName="password" id="password" type="password" [value]="user.password" 
+        autocomplete="none"  required >
+      </mat-form-field>
+    </p>
+    
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Direccion:</mat-label>
+        <input name="address" matInput  formControlName="address" id="address" type="text" [value]="user.address" autocomplete="none" >
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill" >
+        <mat-label>Teléfono:</mat-label>
+        <input name="cellPhone" matInput formControlName="cellPhone" id="cellPhone" type="text" [value]="user.cellPhone" autocomplete="none"  required >
+      </mat-form-field>
+    </p>
+   <div *ngIf="isCadet" class="select-vehiculo">
+        
+          <p>Selecciona un vehículo:</p>
+        <select name="" id="" formControlName="vehicle" name="vehicle" required>
+        
+            <option value="Bicicleta">Bicicleta</option>
+            <option value ="Motocicleta">Motocicleta</option>
+            <option value  ="Automóvil">Automóvil</option>
+        </select>
+        
+    </div>
+   
+      <button [disabled]="profileForm.invalid"   class="subtmitBtn" type="submit">Enviar</button>
+      
+    </form>
+  </div>

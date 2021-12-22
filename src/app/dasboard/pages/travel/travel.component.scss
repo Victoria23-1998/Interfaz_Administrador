@@ -1,0 +1,136 @@
+table.mat-table{
+  width:100% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+mat-form-field{
+    width: 90%;
+}
+
+.estado{
+    width: 150px;
+}
+.apply{
+    margin-left: 60px;
+}
+
+
+.sel-cadet{
+    
+    border-radius: 10px;
+    border:none;
+    width: 150px;
+}
+td{
+    text-align: center;
+  
+}
+th{
+    text-align: center !important;
+   
+}
+.btn-apply{
+    display: flex;
+    align-items: center;
+    button{
+        margin-left: 20px;
+        background: #F0C028;
+        padding: 0px;
+        height: 30px;
+
+    }
+    select{
+        margin-left: 20px;
+    }
+}
+th.mat-header-cell, td.mat-cell, td.mat-footer-cell{
+    width: 160px;
+}
+.select-viajes{
+    width: 200px;
+  
+}
+h3{
+    font-family: 'Open sans';
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #CAE3DB;
+    border-radius: 5px;
+    color: rgb(39, 39, 39);
+}
+mat-progress-bar{
+    
+    width: 500px;
+    
+}
+.content-loading{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 77%;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    height: 700px;
+    left: 260px;
+    position: absolute;
+    align-items: center;
+    margin-top: -75px;
+    padding-top: 80px;
+    img{
+        
+        top:-30;
+        margin-bottom: 30px;
+    }
+}
+
+.pen-retiro{
+    color:#7C9D94;
+}
+.p-retiro{
+    border-left: 4px solid #7C9D94;
+}
+.re-asignado{
+    color: rgb(214, 141, 99);
+}
+.r-asignado{
+    border-left: 4px solid  rgb(214, 141, 99);
+}
+.curso{
+    color: rgb(99, 158, 214);
+}
+.Encurso{
+    border-left: 4px solid  rgb(99, 158, 214);
+}
+.entregado{
+    color:rgb(69, 197, 112);
+}
+.entrega{
+    border-left: 4px solid  rgb(69, 197, 112);
+}
+.p-entrega{
+    border-left: 4px solid  rgb(194, 192, 65);
+}
+.pen-entrega{
+    color: rgb(194, 192, 65);
+}
+.entre-asig{
+    color: rgb(172, 72, 127);
+}
+.en-asig{
+    border-left: 4px solid rgb(172, 72, 127);
+}
+.mat-row:hover .mat-cell {
+ background-color: rgb(230, 230, 230);
+ border-color: rgb(194, 192, 192);
+    
+}
+.content-modif{
+    display: flex;
+    margin-bottom: 20px;
+    select{
+        margin-right: 30px;
+    }
+}
