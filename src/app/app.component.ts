@@ -1,9 +1,10 @@
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ShowMenuService } from './service/show-menu.service';
 import { User } from './auth/interface/localS';
-import { DOCUMENT } from '@angular/common';
+import { MatSidenav } from '@angular/material/sidenav';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -14,16 +15,30 @@ export class AppComponent implements OnInit {
   title = 'ti-logistics-hub-cadet';
   name:string=''
   ShowMenu:boolean=true
-  theme: Theme = 'light-theme';
- 
-  constructor(private router:Router,public show:ShowMenuService,
-  @Inject(DOCUMENT) private document: Document,private renderer: Renderer2){}
 
-  ngOnInit(): void {
-    this.ShowMenu=this.show.showMenu()
-    let localS:User = JSON.parse(localStorage.getItem('Usuario')||'');
+  @ViewChild(MatSidenav) sidenav!:MatSidenav
+  constructor(private router:Router,public show:ShowMenuService, private observer:BreakpointObserver,
+    private cdr: ChangeDetectorRef){}
+  ngAfterViewInit(){
+    this.observer.observe(['(max-width:900px)']).subscribe((res)=>{
+      if(res.matches){
+        this.sidenav.mode='over';
+        this.sidenav.close()
+       
+      }else{
+        this.sidenav.mode='side';
+        this.sidenav.open()
+       
+      }
+      this.cdr.detectChanges()
+    })
+  }
+  async ngOnInit(): Promise<void> {
+    let localS:User = await JSON.parse(localStorage.getItem('Usuario')||'');
     this.name= localS.fullName
-    this.initializeTheme();
+    this.ShowMenu=this.show.showMenu()
+   
+   
   }
   
 
@@ -36,28 +51,12 @@ export class AppComponent implements OnInit {
     }).then(async (result)=> {
       /* Read more about isConfirmed, isDenied below */
       if ( await result.isConfirmed) {
-       
-       
         localStorage.removeItem('Usuario');
         this.router.navigate(['/auth/login']);
-        
-      } else if (result.isDenied) {
-        console.log('no cerró sesión')
-    }
+      } 
   })
   }
 
-  switchTheme() {
-    this.document.body.classList.replace(
-      this.theme,
-      this.theme === 'light-theme'
-        ? (this.theme = 'dark-theme')
-        : (this.theme = 'light-theme')
-    );
-  }
-
-  initializeTheme = (): void =>
-    this.renderer.addClass(this.document.body, this.theme);
+  
 }
 
-export type Theme = 'light-theme' | 'dark-theme';

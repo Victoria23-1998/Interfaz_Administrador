@@ -1,44 +1,44 @@
- <!--header area start-->
- <input type="checkbox" id="check">
-
+ 
+    <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        *ngIf="sidenav?.mode === 'over'" (click)="sidenav.toggle()">
+          <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+          <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+        </button>
+        <img src="../assets/img/Azul Tecnología y Juegos Logotipo (1) 2.png" width="35px" alt="logo" class="LOGO"><span><h3>TODO IT</h3></span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button color="accent" class="btn-logout" (click)="logout()"  *ngIf="this.show.showMenu()">LOGOUT</button>
+    </mat-toolbar>
     
-    <header>
+    <mat-sidenav-container class="example-container">
+        <mat-sidenav #sideNav="matSidenav">
+            <div class="content-img-user" *ngIf="this.show.showMenu()">
+                <img src="../../../../assets/img/blank-profile-picture-gf001a37d2_640.png" width="80px"class="profile_image" alt="">
+                <h4>{{name}}</h4>
+            </div>   
+           <mat-divider *ngIf="this.show.showMenu()"></mat-divider>
+            <div [routerLink]="['/dasboard/registro']" class="item"><img src="../../../../assets/img/usuario.png"width="20px" alt="" class="icon">
+                <span *ngIf="this.show.showMenu()">Registro</span>
+                <span *ngIf="!this.show.showMenu()">Iniciar</span>
+            </div>
+        <div [routerLink]="['/dasboard/travel']" *ngIf="this.show.showMenu()" class="item">
+            <img src="../../../../assets/img/icons8-delivery.png"width="20px" alt="" class="icon">
+            <span>Viajes</span>
+        </div>
+        <div [routerLink]="['/dasboard/historyTravel']" *ngIf="this.show.showMenu()" class="item">
+            <img src="../../../../assets/img/icons8-el-tiempo-de-entrega-90.png"width="20px" alt="" class="icon">
+            <span>Historial de viajes</span>
+        </div>
+        <div [routerLink]="['/dasboard/lists']" *ngIf="this.show.showMenu()" class="item">
+            <img src="../../../../assets/img/icons8-check-list-48.png" width="20px" alt="" class="icon">
+            <span>Listas</span>
+        </div>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="content mat-elevation-z4" > 
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
        
-        <div class="left_area">
-            <h3><img class="logo" src="../../../../assets/img/Azul Tecnología y Juegos Logotipo (1) 2.png" alt=""
-                    width="30px"> <span>TODO IT</span> </h3>
-                   
-        </div>
-        
-        <div class="right_area" (click)="logout()"  *ngIf="this.show.showMenu()">
-            <a class="logout_btn">Logout</a>
-        </div>
-    </header>
-    <!--header area end-->
-    <!--sidebar start-->
-    <div class="sidebar">
-        <label for="check">
-            <img src="../../../../assets/img/icons8-menú-48.png" id="sidebar_btn" alt="" width="30px">
-        </label>
-        <div class="img-user" *ngIf="this.show.showMenu()">
-            <img src="../../../../assets/img/blank-profile-picture-gf001a37d2_640.png" width="80px"
-                class="profile_image" alt="">
-            <h4>{{name}}</h4>
-        </div>
-        <a [routerLink]="['/dasboard/registro']"><img src="../../../../assets/img/usuario.png"
-                [routerLink]="['/dasboard/registro']" width="20px" alt="" class="icon"><span *ngIf="this.show.showMenu()">Registro</span><span *ngIf="!this.show.showMenu()">Iniciar</span></a>
-        <a [routerLink]="['/dasboard/travel']" *ngIf="this.show.showMenu()"><img src="../../../../assets/img/icons8-delivery.png"
-                [routerLink]="['/dasboard/travel']" width="20px" alt="" class="icon"><span>Viajes</span></a>
-        <a [routerLink]="['/dasboard/historyTravel']" *ngIf="this.show.showMenu()"><img
-                src="../../../../assets/img/icons8-el-tiempo-de-entrega-90.png"
-                [routerLink]="['/dasboard/historyTravel']" width="20px" alt="" class="icon"><span>Historial de
-                viajes</span></a>
-        <a [routerLink]="['/dasboard/lists']" *ngIf="this.show.showMenu()"><img src="../../../../assets/img/icons8-check-list-48.png" width="20px"
-                [routerLink]="['/dasboard/lists']" alt="" class="icon"><span>Listas</span></a>
-
-    </div>
-
-    <!--sidebar end-->
-    <div class="content">
-        <router-outlet></router-outlet>
-    </div>
+    

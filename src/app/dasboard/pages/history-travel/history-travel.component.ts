@@ -19,7 +19,7 @@ export class HistoryTravelComponent implements OnInit {
     this.travelService.getTravels(9).subscribe(data => {
       data.forEach(el => {
         this.arrayHistory.push(el)
-
+        this.isloading=false
       })
     })
   }

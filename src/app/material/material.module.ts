@@ -13,7 +13,11 @@ import { MatOptionModule } from '@angular/material/core';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatCheckboxModule} from '@angular/material/checkbox'
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDividerModule} from '@angular/material/divider';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -21,6 +25,6 @@ import {MatCheckboxModule} from '@angular/material/checkbox'
   ],
   exports:[MatIconModule,MatButtonModule,MatFormFieldModule,MatInputModule,MatRadioModule,
     MatTableModule,MatPaginatorModule,MatSortModule,MatSelectModule,MatOptionModule,MatExpansionModule,MatProgressBarModule,
-    MatSlideToggleModule,MatCheckboxModule ]
+    MatSlideToggleModule,MatCheckboxModule,MatSidenavModule,MatToolbarModule,MatDividerModule ]
 })
 export class MaterialModule { }

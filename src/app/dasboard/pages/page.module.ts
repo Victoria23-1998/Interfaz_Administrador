@@ -12,7 +12,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { HistoryTravelComponent } from './history-travel/history-travel.component';
 import { ListsComponent } from './lists/lists.component';
 import { ComponentsModule } from '../components/components.module';
-import { LoaderComponent } from '../components/loader/loader.component';
+
 import 'animate.css';
 import { VigilanteGuard } from 'src/app/vigilante.guard';
 @NgModule({
@@ -29,7 +29,7 @@ import { VigilanteGuard } from 'src/app/vigilante.guard';
     ComponentsModule 
   ],
   exports:[RegistrationComponent,TravelComponent,
-    HistoryTravelComponent,ListsComponent,LoaderComponent   ],
+    HistoryTravelComponent,ListsComponent],
   providers:[VigilanteGuard]
 })
 export class PageModule { }

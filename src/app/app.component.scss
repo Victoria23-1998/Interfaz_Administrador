@@ -1,179 +1,73 @@
-header{
-    position: fixed;
-    background: #012230;
-    padding: 20px;
-    width: 100%;
-    height: 30px;
-    top: 0;
-  }
+mat-toolbar{
+  background-color: #013042;
+  color: white;
   
-  .left_area h3{
-    color: #fff;
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: 700;
-    margin-top: -15px;
-  }
+}
+.btn-logout{
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+mat-sidenav{
+  background-color: #013042;
+  color: white;
+  margin:16px;
+  width: 200px;
+  border-right: none;
+  border-radius: 10px;
   
-  .left_area span{
-    color: #e5e8e9;
+  display: flex;
+  flex-direction: column;
+  img{
+    border-radius: 100px;
+  }
+ .item{
    
-  }
+   width: 100%;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   padding-left: 30px;
+   &:hover{
+    background-color: #F0C028;
+   }
+   &:focus{
+     background-color: #F0C028;
+   }
+   img{
+     margin-right: 8px;
+   }
+ }
+}
+mat-sidenav-container{
+  height: calc(100vh - 65px);
+}
+.content{
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 98px);
+  border-radius: 10px;
+}
+.content-img-user{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
-  .logout_btn{
-    padding: 3px 3px 3px 3px;
-    background: #F0C028;
-    text-decoration: none;
-    float: right;
-    margin-top: -27px;
-    margin-right: 10px;
-    border-radius: 2px;
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff;
-    transition: 0.5s;
-    transition-property: background;
-  }
-  
-  .logout_btn:hover{
-    background: #F0C028;
-  }
-  
-  .sidebar {
-    background: #013042;
-    padding-top: 30px;
-    position: fixed;
-    left: 0;
-    width: 250px;
-    height:100%;
-    transition: 0.5s;
-    transition-property: left;
-    margin-top: -10px;
-    //nuevas
-    overflow-y: auto;
-   
-  }
-  
-  .sidebar .profile_image{
-   border-radius: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .sidebar h4{
-    color: #ccc;
-    margin-top: 0;
-    margin-bottom: 40px;
-  }
-  
-  .sidebar a{
-    color: #fff;
-    display: block;
-    width: 100%;
-    line-height: 60px;
-    text-decoration: none;
-    padding-left: 40px;
-    box-sizing: border-box;
-    transition: 0.5s;
-    transition-property: background;
-  }
-  .content{
-    width: calc(100% - 250px);
-    margin-top: 50px;
-    padding: 20px;
-    margin-left: 250px;
-    height: 100vh;
-    transition: 0.5s;
  
-  }
-  
-  
-  .sidebar a:hover{
-    background: #F0C028;
-  }
-  
-  .sidebar i{
-    padding-right: 10px;
-  }
-  
-  label #sidebar_btn{
-    z-index: 1;
-    color: #fff;
-    position: absolute;
-    cursor: pointer;
-    left: 205px;
-    font-size: 20px;
-    margin: 5px 0;
-    transition: 0.5s;
-    transition-property: color;
-    margin-top: -20px;
-    
-  }
-  
-  label #sidebar_btn:hover{
-    color: #F0C028;
-  }
-  
-  #check:checked ~ .sidebar{
-    left: -190px;
-  }
-  
-  #check:checked ~ .sidebar a span{
-    display: none;
-  }
-  
-  #check:checked ~ .sidebar a{
-    font-size: 20px;
-    margin-left: 170px;
-    width: 80px;
-  }
-  
-  
-  
-  #check:checked ~ .content{
-    margin-left: 150px;
-  }
-  
-  #check{
-   display: none;
-  }
-  .img-user{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      img{
-          margin-right: auto;
-          margin-left: auto;
-      }
-
-  }
-  .sidebar{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-
-  }
-  .logo{
-      margin-top: -5px;
-      margin-right: 10px;
-      margin-left: 15px;
-  }
- a:focus{
-     background: #F0C028;
- }
- .icon{
-     margin-right: 10px;
- }
- .right_area{
-     cursor: pointer;
-     a{
-         cursor: pointer;
-     }
- }
- .toggle{
-     font-weight: 200;
-     font-size: 0.8rem;
-     margin-left: 20px;
- }
+}
+mat-divider{
+  background-color: rgb(197, 197, 197);
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 6px;
+}
+.logo{
+  margin-right: 20px;
+}

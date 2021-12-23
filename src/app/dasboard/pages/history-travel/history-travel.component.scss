@@ -17,6 +17,9 @@ h3{
 mat-expansion-panel{
     margin-bottom: 15px;
     background-color:#CAE3DB ;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 mat-progress-bar{
     
@@ -27,11 +30,11 @@ mat-progress-bar{
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 77%;
+    width: 87%;
     background-color: rgb(255, 255, 255);
     z-index: 100;
     height: 700px;
-    left: 260px;
+    left: 160px;
     position: absolute;
     align-items: center;
     margin-top: -30px;
