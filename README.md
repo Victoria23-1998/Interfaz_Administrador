@@ -14,7 +14,7 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 
 1-Primer paso, clonar el repositorio en Git
 ```sh
-$git clone https://github.com/Victoria23-1998/Interfaz_Cliente.git
+$git clone https://github.com/Victoria23-1998/Interfaz_Administrador.git
 ```
 2- Instalar todas las dependencias al abrir el proyecto en Visual Studio Code
 
