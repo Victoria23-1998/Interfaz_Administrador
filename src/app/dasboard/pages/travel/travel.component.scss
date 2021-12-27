@@ -70,15 +70,16 @@ mat-progress-bar{
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 87%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
     z-index: 3;
     height: 700px;
-    left: 160px;
     position: absolute;
     align-items: center;
-    margin-top: -75px;
-    padding-top: 80px;
+    padding-top: 100px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     img{
         
         top:-30;
@@ -86,25 +87,25 @@ mat-progress-bar{
     }
 }
 
-.pen-retiro{
+.Pendiente-Retiro{
     color:#7C9D94;
 }
 .p-retiro{
     border-left: 4px solid #7C9D94;
 }
-.re-asignado{
+.Retiro-Asignado{
     color: rgb(214, 141, 99);
 }
 .r-asignado{
     border-left: 4px solid  rgb(214, 141, 99);
 }
-.curso{
+.En-curso{
     color: rgb(99, 158, 214);
 }
 .Encurso{
     border-left: 4px solid  rgb(99, 158, 214);
 }
-.entregado{
+.Entregado{
     color:rgb(69, 197, 112);
 }
 .entrega{
@@ -113,14 +114,17 @@ mat-progress-bar{
 .p-entrega{
     border-left: 4px solid  rgb(194, 192, 65);
 }
-.pen-entrega{
+.Pendiente-Entrega{
     color: rgb(194, 192, 65);
 }
-.entre-asig{
+.Entrega-Asignada{
     color: rgb(172, 72, 127);
 }
 .en-asig{
     border-left: 4px solid rgb(172, 72, 127);
+}
+.Cancelado{
+    color: rgb(180, 54, 54);
 }
 .mat-row:hover .mat-cell {
  background-color: rgb(230, 230, 230);

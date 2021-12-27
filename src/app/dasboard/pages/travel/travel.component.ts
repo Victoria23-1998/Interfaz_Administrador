@@ -90,11 +90,8 @@ ngOnInit(): void {
         case 6:
         result = "Entrega-Asignada"
         break;
-        case 3:
-        result = "En curso"
-        break;
-        case 7:
-        result = "En curso"
+        case 3||7:
+        result = "En-curso"
         break;
         case 8:
         result = "Entregado"
@@ -102,6 +99,9 @@ ngOnInit(): void {
         case 4:
         result = "Entregado"
         break;
+        case 9:
+          result = "Recibido"
+          break;
         case 10:
         result = "Cancelado"
         break;
@@ -259,6 +259,7 @@ forkJoin([travelStatus1,travelStatus2,travelStatus3,travelStatus4,travelStatus5,
       this.activos = [...data[0],...data[1],...data[2],...data[3],...data[4],...data[5],...data[6],...data[7]];
       this.dataSource.data = this.activos
       this.activos.forEach(travel =>{
+        
         this.arrayActivos.push(travel)
       })
      

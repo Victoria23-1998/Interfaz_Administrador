@@ -80,9 +80,7 @@
     <!-- estado envio Column -->
     <ng-container matColumnDef="EstadoEnvio">
       <th mat-header-cell *matHeaderCellDef> Estado Actual</th>
-      <td mat-cell *matCellDef="let element" [ngClass]="{'pen-retiro':element.lastStatusTravel == 1,'re-asignado':element.lastStatusTravel == 2,'curso':element.lastStatusTravel==3 ||element.lastStatusTravel==7,
-      'entregado':element.lastStatusTravel == 4 ||element.lastStatusTravel == 8,'pen-entrega':element.lastStatusTravel == 5,
-      'entre-asig':element.lastStatusTravel == 6 }" class="estado-envio"> {{descripEstate(element.lastStatusTravel)}}
+      <td mat-cell *matCellDef="let element" [ngClass]="descripEstate(element.lastStatusTravel)" class="estado-envio"> {{descripEstate(element.lastStatusTravel)}}
       </td>
 
     </ng-container>

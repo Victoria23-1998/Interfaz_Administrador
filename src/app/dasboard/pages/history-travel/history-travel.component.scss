@@ -30,15 +30,16 @@ mat-progress-bar{
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 87%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
-    z-index: 100;
+    z-index: 3;
     height: 700px;
-    left: 160px;
     position: absolute;
     align-items: center;
-    margin-top: -30px;
-    padding-top: 80px;
+    padding-top: 100px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     img{
         
         top:-30;

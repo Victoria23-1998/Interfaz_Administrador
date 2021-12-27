@@ -1,16 +1,14 @@
 
 # Ver DEMO aquí:
 
-
-
-
 https://user-images.githubusercontent.com/85801314/147167418-282204e7-3197-4588-97c6-7c396cc5d469.mp4
-
-
-
 
 # Comenzando 🚀
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local.
+
+#Usuario para ingresar a la App
+Correo: victoria@gmail.com
+Clave: 1234
 
 1-Primer paso, clonar el repositorio en Git
 ```sh

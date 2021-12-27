@@ -70,21 +70,23 @@ mat-progress-bar{
     display: flex;
     flex-direction: column;
     position: absolute;
-    width: 88%;
+    width: 100%;
     background-color: rgb(255, 255, 255);
-    z-index: 100;
+    z-index: 3;
     height: 700px;
-    left: 160px;
     position: absolute;
     align-items: center;
-    margin-top: -75px;
-    padding-top: 80px;
+    padding-top: 100px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     img{
         
         top:-30;
         margin-bottom: 30px;
     }
 }
+
 .mat-row:hover .mat-cell {
  background-color: rgb(230, 230, 230);
  border-color: rgb(194, 192, 192);
@@ -101,4 +103,7 @@ mat-progress-bar{
 }
 .admin{
     color: rgb(192, 112, 58);
+}
+section{
+    padding: 30px;
 }

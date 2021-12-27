@@ -15,12 +15,12 @@ export class RegistrationComponent implements OnInit {
   
   constructor(private travelService:TravelService ) {}
  
-  //Método Get
+ 
   ngOnInit(): void {
     
     
   }
-  //Método Post
+ 
   sendData(formDirective:FormGroupDirective) {
   
   let idVehicle:number=0
