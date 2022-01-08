@@ -6,9 +6,9 @@ export interface UserResponse {
     cellPhone:    string;
     isAccepted:   boolean;
     isDeleted:    boolean;
-    observations: null;
+    observations: null|string;
     password:     string;
-    vehicle:      null;
+    vehicle:      null|string;
     rol:          Rol;
 }
 

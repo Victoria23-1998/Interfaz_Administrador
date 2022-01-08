@@ -12,14 +12,34 @@ import { Vehicle } from '../../interface/UserResgister';
   
 })
 export class RegistrationComponent implements OnInit {
+  rol: Rol = {
+    id:0,
+    name:'',
+    isDeleted:0
+}
+vehicle:Vehicle={
+    id:0,
+    name:'',
+    isDeleted:0
+}
+user: UserRegister = {
+ 
+    email:'',
+    password:'',
+    fullName:'',
+    address:'',
+    cellPhone:'',
+    isAccepted:true,
+    isDeleted:false,
+    observation:'',
+    vehicle:this.vehicle,
+    rol: this.rol
   
+};
   constructor(private travelService:TravelService ) {}
  
  
-  ngOnInit(): void {
-    
-    
-  }
+  ngOnInit(): void {}
  
   sendData(formDirective:FormGroupDirective) {
   
@@ -106,30 +126,7 @@ this.vehicle={
  
  }
 
- rol: Rol = {
-    id:0,
-    name:'',
-    isDeleted:0
-}
-vehicle:Vehicle={
-    id:0,
-    name:'',
-    isDeleted:0
-}
-user: UserRegister = {
- 
-    email:'',
-    password:'',
-    fullName:'',
-    address:'',
-    cellPhone:'',
-    isAccepted:true,
-    isDeleted:false,
-    observation:'',
-    vehicle:this.vehicle,
-    rol: this.rol
-  
-};
+
 
   // uso validators para hacer las validaciones del formulario 
   profileForm = new FormGroup({

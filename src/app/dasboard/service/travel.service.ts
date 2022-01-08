@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TravelResponse } from '../interface/travelResponse';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs';
-import { HttpErrorResponse } from '@angular/common/http';
 import {UserRegister} from '../interface/UserResgister'
 @Injectable({
   providedIn: 'root'

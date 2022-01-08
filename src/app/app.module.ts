@@ -9,6 +9,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { VigilanteGuard } from './vigilante.guard';
 import { ComponentsModule } from './dasboard/components/components.module';
 import { MaterialModule } from './material/material.module';
+import { HttpClient } from '@angular/common/http';
 import 'animate.css';
 
 @NgModule({
